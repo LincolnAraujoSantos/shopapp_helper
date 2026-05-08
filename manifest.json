@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Automação Shop App",
+  "version": "1.1",
+  "description": "Unificação das extensões para automação do Shop App, incluindo ferramentas de CMS Helper.",
+  "permissions": ["scripting", "activeTab", "storage", "webNavigation"],
+  "host_permissions": [
+    "https://opstools-p1-br.ecom-qa.samsung.com/*",
+    "https://opstools-p1-pe.ecom-qa.samsung.com/*",
+    "https://opstools-p1-cl.ecom-qa.samsung.com/*",
+    "https://opstools-p1-co.ecom-qa.samsung.com/*",
+    "https://opstools-p1-mx.ecom-qa.samsung.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Ativar Automação Shop App"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": [
+        "utils/initializeCmsHelperElements.js",
+        "utils/copyButton.js",
+        "functions/deleteAllExpired.js",
+        "functions/toggleTitles.js",
+        "functions/toggleBorders.js",
+        "functions/toggleExpireds.js",
+        "functions/toggleShowOnScreen.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["floating.html", "floating.css", "floating.js", "inject.js"],
+      "matches": ["https://*/*"]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Automação Shop App</title>
+  <link rel="stylesheet" href="floating.css" />
+</head>
+<body>
+  <div id="ext-box" class="content">
+    <h1>Automação Shop App</h1>
+
+    <div id="pos-btns">
+      <button data-pos="top-left" title="Topo Esquerdo">↖</button>
+      <button data-pos="top-right" title="Topo Direito">↗</button>
+      <button data-pos="bottom-left" title="Base Esquerda">↙</button>
+      <button data-pos="bottom-right" title="Base Direita">↘</button>
+    </div>
+
+    <div class="date-inputs">
+      <div class="input-copy">
+        <input type="text" id="campo1" placeholder="Campo 1" />
+        <button class="copy-btn" data-copy="campo1">Copiar</button>
+      </div>
+
+      <div class="input-copy">
+        <input type="text" id="campo2" placeholder="Campo 2" />
+        <button class="copy-btn" data-copy="campo2">Copiar</button>
+      </div>
+    </div>
+
+    <div class="functions-buttons">
+      <p>Titulos</p>
+      <div class="feature-buttons-group">
+        <button id="injectTitles">Mostrar</button>
+        <button id="removeTitles">Ocultar</button>
+      </div>
+
+      <p>Borda Vermelha</p>
+      <div class="feature-buttons-group">
+        <button id="addRedBorders">Mostrar</button>
+        <button id="removeRedBorders">Ocultar</button>
+      </div>
+
+      <p>Expirados</p>
+      <div class="feature-buttons-group">
+        <button id="injectShowExpired">Mostrar</button>
+        <button id="injectHideExpired">Ocultar</button>
+      </div>
+
+      <p>Display No</p>
+      <div class="feature-buttons-group">
+        <button id="injectShowDisplayNo">Mostrar</button>
+        <button id="injectHideDisplayNo">Ocultar</button>
+      </div>
+    </div>
+    
+    
+    <div>
+      <!-- <button id="execute">Executar</button> -->
+      <button id="minimizar">Minimizar</button>
+    </div>
+  </div>
+
+  <script src="floating.js"></script>
+</body>
+</html>
